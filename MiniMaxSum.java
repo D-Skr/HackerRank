@@ -1,16 +1,14 @@
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
 import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result {
+    //sample input
+    //1 2 3 4 5
+    
+    //sample output
+    // 10 14
+class Result1 {
 
     /*
      * Complete the 'miniMaxSum' function below.
@@ -20,10 +18,12 @@ class Result {
 
     public static void miniMaxSum(List<Integer> arr) {
     // Write your code here
-        int sum = arr.stream().mapToInt(i -> i).sum();
-        int max = Collections.max(arr);
-        int min = Collections.min(arr);
-       
+        long sum = arr.stream().mapToLong(i -> i).sum();
+        long max = Collections.max(arr);
+        long min = Collections.min(arr);
+        System.out.print(sum - max);
+        System.out.print(" ");
+        System.out.print(sum - min);
     }
 
 }
@@ -37,7 +37,7 @@ public class MiniMaxSum {
             .map(Integer::parseInt)
             .collect(toList());
 
-        Result.miniMaxSum(arr);
+        Result1.miniMaxSum(arr);
 
         bufferedReader.close();
     }

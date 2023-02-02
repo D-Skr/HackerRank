@@ -22,15 +22,21 @@ class Result2 {
 
     public static String timeConversion(String s) {
     // Write your code here
+        StringBuilder sb = new StringBuilder();
         int hours = Integer.parseInt(s.substring(0, 2));
-        System.out.println(hours);
-        if(s.charAt(s.length()-1) == 'A' && hours == 12){
-            hours = 00;
+        if(s.endsWith("AM")){
+            if(hours == 12){
+                sb.append("00");
+            } else {
+                sb.append("0");
+                sb.append(hours);
+            }
         }
-        if(s.charAt(s.length()-1) == 'P'){
-            hours += 12;
+        if(s.endsWith("PM")){
+            if(hours < 12) hours += 12;
+            sb.append(hours);
         }
-        StringBuilder sb = new StringBuilder(String.valueOf(hours));
+
         sb.append(s.substring(2, s.length() - 2));
         System.out.println(sb);
         

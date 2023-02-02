@@ -22,9 +22,19 @@ class Result2 {
 
     public static String timeConversion(String s) {
     // Write your code here
-    StringBuilder sb = new StringBuilder(s.substring(0, s.length() - 2));
-    System.out.println(sb);
-    return sb.toString();
+        int hours = Integer.parseInt(s.substring(0, 2));
+        System.out.println(hours);
+        if(s.charAt(s.length()-1) == 'A' && hours == 12){
+            hours = 00;
+        }
+        if(s.charAt(s.length()-1) == 'P'){
+            hours += 12;
+        }
+        StringBuilder sb = new StringBuilder(String.valueOf(hours));
+        sb.append(s.substring(2, s.length() - 2));
+        System.out.println(sb);
+        
+        return sb.toString();
     }
 
 }

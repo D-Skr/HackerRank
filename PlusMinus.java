@@ -9,7 +9,8 @@ public class PlusMinus {
         
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        int n = Integer.parseInt(bufferedReader.readLine().trim());
+        //n is not needed.
+        //int n = Integer.parseInt(bufferedReader.readLine().trim());
 
         List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
             .map(Integer::parseInt)
@@ -52,15 +53,7 @@ class Result {
     plus /= arr.size();
     zero/= arr.size();
     minus /= arr.size();
-    // double plusRatio = plus / arr.size();
-    // double zeroRatio = zero / arr.size();
-    // double minusRatio = minus / arr.size();
-    // System.out.printf("%.6f %n", plusRatio);
-    // System.out.printf("%.6f %n", zeroRatio);
-    // System.out.printf("%.6f %n", minusRatio);
-    // System.out.println(plus);
-    // System.out.println(zero);
-    // System.out.println(minus);
+ 
     System.out.printf("%.6f %n", plus);
     System.out.printf("%.6f %n", zero);
     System.out.printf("%.6f %n", minus);

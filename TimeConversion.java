@@ -4,6 +4,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+ * Sample Input
+ * 07:05:45PM
+ * Sample Output
+ * 19:05:45
+ */
+
 class Result2 {
 
     /*

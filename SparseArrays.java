@@ -3,12 +3,13 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result {
+class Result3 {
     
     /*
      * Complete the 'matchingStrings' function below.
@@ -21,8 +22,19 @@ class Result {
     
     
     public static List<Integer> matchingStrings(List<String> strings, List<String> queries) {
-        
-        return null;
+     // Write your code here
+        List<Integer> list = new ArrayList<>();
+        int i = 0;
+        for(String q : queries){
+            for(String s : strings){
+               if(q.equals(s)){
+                   i++;
+               } 
+            }
+            list.add(i);
+            i = 0;
+        }
+        return list;
     }
 
     public class SparseArrays {
@@ -55,7 +67,7 @@ class Result {
             })
                 .collect(toList());
 
-            List<Integer> res = Result.matchingStrings(strings, queries);
+            List<Integer> res = Result3.matchingStrings(strings, queries);
 
             bufferedWriter.write(
                 res.stream()

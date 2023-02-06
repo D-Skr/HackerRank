@@ -8,19 +8,25 @@ import java.util.stream.IntStream;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-public class SparseArrays {
-
-    class Result {
-
-        /*
-         * Complete the 'matchingStrings' function below.
-         *
-         * The function is expected to return an INTEGER_ARRAY.
-         * The function accepts following parameters:
-         *  1. STRING_ARRAY strings
-         *  2. STRING_ARRAY queries
-         */
+class Result {
+    
+    /*
+     * Complete the 'matchingStrings' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. STRING_ARRAY strings
+     *  2. STRING_ARRAY queries
+     */
+    
+    
+    public static List<Integer> matchingStrings(List<String> strings, List<String> queries) {
         
+        return null;
+    }
+
+    public class SparseArrays {
+
     }
     
     public static void main(String[] args) throws IOException {

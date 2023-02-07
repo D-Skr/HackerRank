@@ -1,4 +1,4 @@
-//converting number from Decimal to Binary using recorsion
+//converting number from Decimal to Binary using recursion
 
 public class DecimalToBinary {
     

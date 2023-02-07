@@ -2,8 +2,27 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+/*
+ * Given an array of integers, where all elements but one occur twice, 
+ * find the unique element.
+ * Example 
+ * a = [1,2,3,4,3,2,1];
+ * The unique element is 4
+ * Function Description
+ * Complete the lonelyinteger function in the editor below.
+ * 
+ * lonelyinteger has the following parameter(s):
+ * int a[n]: an array of integers
+ * Returns
+ * int: the element that occurs only once
+ */
 
 class Result4 {
 
@@ -16,7 +35,23 @@ class Result4 {
     
     public static int lonelyinteger(List<Integer> a) {
         // Write your code here
-    
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(Integer i : a){
+            if(!map.containsKey(i)){
+                map.put(i, 1);
+            } else {
+                map.put(i, map.get(i)+1);
+            }
+        }
+        Integer result=0;
+        Integer temp = 1;
+        for(Map.Entry<Integer,Integer> entry : map.entrySet()){
+            if(temp.equals(entry.getValue())){
+                result = (Integer)entry.getKey();
+                System.out.println(result);
+            }
+        }
+        return result;
     }
 }
 

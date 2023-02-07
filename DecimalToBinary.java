@@ -4,14 +4,15 @@ public class DecimalToBinary {
     
     public static int decToBin(int n) {
         
-        if(a == 0) {
-
+        if(n == 0) {
+            return 0;
         }
-        return n%2 + decToBin(n/2);
+        return n%2 + 10 * decToBin(n/2);
     }
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
+        
+        System.out.println(decToBin(145));
 
     }
 

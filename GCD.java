@@ -8,9 +8,11 @@ public class GCD {
      * Step 3: Unintentional case - the constraint
      */
 
-    //step 1: Euclidean algorithm
     public static int gcd(int a, int b) {
-    
+        //step 2
+        if (b == 0) return a;
+        
+        //step 1: Euclidean algorithm
         return gcd(b, a % b);
     }
     

@@ -14,6 +14,10 @@ class Result4 {
      * The function accepts INTEGER_ARRAY a as parameter.
      */
     
+    public static int lonelyinteger(List<Integer> a) {
+        // Write your code here
+    
+    }
 }
 
 public class LonelyInteger {

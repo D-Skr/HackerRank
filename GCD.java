@@ -9,6 +9,10 @@ public class GCD {
      */
 
     public static int gcd(int a, int b) {
+        
+        //step 1
+        if (a < 0 || b < 0) return -1;
+        
         //step 2
         if (b == 0) return a;
         

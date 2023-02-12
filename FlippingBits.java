@@ -29,11 +29,18 @@ public class FlippingBits {
      */
 
        public static long flippingBits(long n) {
+           
+           /* use a long data type for the return value 
+            * to ensure that the result is treated as an unsigned integer. 
+            * The ^ operator performs a bitwise XOR operation, 
+            * and 0xFFFFFFFFL represents the 32 bits of all 1s in binary.
+            */
+           
            return n ^ 0xFFFFFFFFl;
        }
     
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 

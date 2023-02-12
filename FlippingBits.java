@@ -23,7 +23,7 @@ public class FlippingBits {
      */
 
        public static long flippingBits(long n) {
-           return null;
+           return n ^ 0xFFFFFFFFl;
        }
     
     

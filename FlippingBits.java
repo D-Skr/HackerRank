@@ -20,11 +20,13 @@ public class FlippingBits {
      * Explanation:Take 1 for example, as unsigned 32-bits is 
      * 00000000000000000000000000000001 and doing the flipping 
      * we get 11111111111111111111111111111110 which in turn is 4294967294.
-
-
-Input Format
      */
 
+       public static long flippingBits(long n) {
+           return null;
+       }
+    
+    
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
